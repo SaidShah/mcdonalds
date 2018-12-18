@@ -5,9 +5,9 @@ const Employee = ({employee}) => (
 
 
   <div>
-    <div>
+    <div className="applied">
       <button>Fire Employee</button><br></br>
-      <img src={employee.image} className="imageSize"/>
+      <img src={employee.image} className="imageSize" alt=""/>
       <h4>{employee.first_name} {employee.last_name}</h4>
     </div>
   </div>

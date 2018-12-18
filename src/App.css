@@ -1,3 +1,22 @@
+table {
+  border-collapse: collapse;
+  margin-left: 500px;
+  width: 50%;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+th {
+  height: 30px;
+   background-color: #4CAF50;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+
 .sidenav {
   height: 100%; /* Full-height: remove this if you want "auto" height */
   width: 160px; /* Set the width of the sidebar */
@@ -66,11 +85,7 @@
 .item {
   order: 4;
 }
-/* .flex-container > div {
-  background-color: #f1f1f1;
-  width: 100px;
-  margin: 10px;
+
+.applied{
   text-align: center;
-  line-height: 75px;
-  font-size: 30px;
-} */
+}

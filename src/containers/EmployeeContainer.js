@@ -4,24 +4,11 @@ import '../App.css'
 
 class EmployeeContainer extends Component {
 
-  state={
-    employees: [],
-    employeesCopy: [],
-    isHired: true
-  }
-
-  componentDidMount() {
-    fetch('http://localhost:3001/mcdonalds_payroll')
-    .then(res => res.json())
-    .then(allEmployees =>{
-      this.setState({employees: allEmployees, employeesCopy: allEmployees})
-    })
-  }
 
   render() {
 
-    let allEmployees = this.state.employeesCopy.map(eachEmployee =>{
-      return <Employee employee={eachEmployee} hired={this.state.isHired} key={eachEmployee.id}/>
+    let allEmployees = this.props.employeesCopy.map(eachEmployee =>{
+      return <Employee employee={eachEmployee} key={eachEmployee.id}/>
     })
 
     return (
