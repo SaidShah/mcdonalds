@@ -26,7 +26,6 @@ class App extends Component {
       peopleApplied: allApplied,
       peopleAppliedCopy: allApplied
     }))
-
   }
 
   isHired=(e,person)=>{
@@ -41,6 +40,8 @@ class App extends Component {
   fetch(`http://localhost:3001/people_applied/${person.id}`,{method: "DELETE"})
   }
 
+
+
   handleChange=(e)=>{
    if(e.target.className === "byName"){
       this.filterEmployeesByName(e.target.value)
@@ -50,6 +51,8 @@ class App extends Component {
       this.filterApplicantByName(e.target.value)
     }
   }
+
+
   filterEmployeesByName=(name)=>{
   let newArr = this.state.employeesCopy.filter(emp =>{
       return emp.first_name.includes(name)
@@ -58,6 +61,7 @@ class App extends Component {
       employees: newArr
     })
   }
+
 
   filterEmployeesBySalary(email){
     let newArr = this.state.employeesCopy.filter(emp =>{
@@ -68,6 +72,7 @@ class App extends Component {
     })
 
   }
+
 
   filterApplicantByName(name){
     let newArr=this.state.peopleAppliedCopy.filter(people=>{
